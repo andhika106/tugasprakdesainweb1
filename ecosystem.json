@@ -1,0 +1,19 @@
+{
+  "apps" : [
+    {
+      "name"            : "prod.sapoe",
+      "script"          : "yarn",
+      "args"            : "start:watch",
+      "ignore_watch"    : ["node_modules", "log/error.log", "log/access.log"],
+      "error_file"      : "log/error.log",
+      "out_file"        : "log/access.log",
+      "merge_logs"      : true,
+      "log_date_format" : "YYYY-MM-DD HH:mm Z",
+      "exec_mode" : "fork",
+      "env"  : {
+          "PORT": 4100,
+          "NODE_ENV": "production"
+      }
+    }
+  ]
+}
